@@ -1,0 +1,75 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,img_btn_reset_png,img_zero_png,img_cross_png,img_vertical_png,img_bg_png,img_one_png,img_three_1_png,img_three_2_png,img_three_3_png,img_three_4_png,img_three_5_png,img_four_1_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"name": "description_json",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "img_btn_reset_png",
+			"type": "image",
+			"url": "assets/img_btn_reset.png"
+		},
+		{
+			"name": "img_zero_png",
+			"type": "image",
+			"url": "assets/img_zero.png"
+		},
+		{
+			"name": "img_cross_png",
+			"type": "image",
+			"url": "assets/img_cross.png"
+		},
+		{
+			"name": "img_vertical_png",
+			"type": "image",
+			"url": "assets/img_vertical.png"
+		},
+		{
+			"name": "img_bg_png",
+			"type": "image",
+			"url": "assets/img_bg.png"
+		},
+		{
+			"name": "img_one_png",
+			"type": "image",
+			"url": "assets/img_one.png"
+		},
+		{
+			"name": "img_three_1_png",
+			"type": "image",
+			"url": "assets/img_three_1.png"
+		},
+		{
+			"name": "img_three_2_png",
+			"type": "image",
+			"url": "assets/img_three_2.png"
+		},
+		{
+			"name": "img_three_3_png",
+			"type": "image",
+			"url": "assets/img_three_3.png"
+		},
+		{
+			"name": "img_three_4_png",
+			"type": "image",
+			"url": "assets/img_three_4.png"
+		},
+		{
+			"name": "img_three_5_png",
+			"type": "image",
+			"url": "assets/img_three_5.png"
+		},
+		{
+			"name": "img_four_1_png",
+			"type": "image",
+			"url": "assets/img_four_1.png"
+		}
+	]
+}

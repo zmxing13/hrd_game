@@ -1,0 +1,28 @@
+{
+	"initial": [
+		"libs/modules/egret/egret.js",
+		"libs/modules/egret/egret.web.js",
+		"libs/modules/game/game.js",
+		"libs/modules/res/res.js",
+		"libs/modules/tween/tween.js",
+		"libs/modules/dragonBones/dragonBones.js"
+	],
+	"game": [
+		"bin-debug/layers/ImgPublicClass.js",
+		"bin-debug/layers/TypeFour.js",
+		"bin-debug/events/CreateLine.js",
+		"bin-debug/events/EventManage.js",
+		"bin-debug/events/PublicClass.js",
+		"bin-debug/LoadingUI.js",
+		"bin-debug/layers/Layer_GamePage.js",
+		"bin-debug/layers/StageLayout.js",
+		"bin-debug/Main.js",
+		"bin-debug/layers/TypeOne.js",
+		"bin-debug/layers/TypeThree.js",
+		"bin-debug/layers/TypeTwo.js",
+		"bin-debug/layers/TypeZero.js",
+		"bin-debug/prefabs/DragonBonesAnimation.js",
+		"bin-debug/prefabs/MovieClipAnimation.js",
+		"bin-debug/prefabs/SoundManage.js"
+	]
+}
