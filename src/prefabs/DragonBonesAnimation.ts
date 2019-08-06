@@ -14,7 +14,7 @@ class DragonBonesAnimation extends egret.DisplayObjectContainer{
     private _lastAnimationState: dragonBones.AnimationState;
     public constructor(name: string,armatureStr:string="Armature"){
         super();
-        this.factory = new dragonBones.EgretFactory();
+        this.factory = dragonBones.EgretFactory.factory;
         this.addArmatureToFactory(this.factory,name);
         this.armature = this.factory.buildArmature(armatureStr);
         this.newObject = this.armature.display;
@@ -34,9 +34,9 @@ class DragonBonesAnimation extends egret.DisplayObjectContainer{
         H=_bone.slot.display.texture.textureHeight;
         
         var _image: egret.Bitmap = new egret.Bitmap();
-        _image.texture = RES.getRes(textureName);
         _image.anchorOffsetX = _image.width/2;
-        _image.anchorOffsetY = _image.height/2;
+        _image.anchorOffsetY = _image.height / 2;
+        _image.texture = RES.getRes(textureName);
         //用image替换bone.display完成换装（注意bone.display的回收）
         _bone.slot.display = _image;
         return [W,H,_image];
@@ -52,37 +52,43 @@ class DragonBonesAnimation extends egret.DisplayObjectContainer{
         slot.setDisplay(image);//替换插槽的显示对象
     }
      /**
-         * 开始播放指定名称的动画。
-         * 要播放的动画将经过指定时间的淡入过程，然后开始播放，同时之前播放的动画会经过相同时间的淡出过程。
-         * @param animationName {string} 指定播放动画的名称.
-         * @param fadeInTime {number} 动画淡入时间 (>= 0), 默认值：-1 意味着使用动画数据中的淡入时间.
-         * @param duration {number} 动画播放时间。默认值：-1 意味着使用动画数据中的播放时间.
-         * @param playTimes {number} 动画播放次数(0:循环播放, >=1:播放次数, NaN:使用动画数据中的播放时间), 默认值：NaN
+         - 淡入播放指定的动画。
+         * @param animationName - 动画数据名称。
+         * @param fadeInTime - 淡入时间。 [-1: 使用动画数据默认值, [0~N]: 淡入时间 (以秒为单位)] （默认: -1）
+         * @param playTimes - 播放次数。 [-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次] （默认: -1）
+         * @param layer - 混合图层，图层高的动画状态会优先获取混合权重，当混合权重分配总和超过 1.0 时，剩余的动画状态将不能再获得权重分配。 （默认: 0）
+         * @param group - 混合组名称，该属性通常用来指定多个动画状态混合时的相互替换关系。 （默认: null）
+         * @param fadeOutMode - 淡出模式，该属性通常用来指定多个动画状态混合时的相互替换模式。 （默认: AnimationFadeOutMode.SameLayerAndGroup）
+         * @returns 播放的动画状态。
     */
-    public playAction(animationName: string,fadeInTime: number = 0,duration: number = -1,playTimes: number = NaN): dragonBones.AnimationState {
-        return this.armature.animation.gotoAndPlay(animationName, fadeInTime, duration, playTimes);
+    public fadeIn(animationName: string, fadeInTime: number=-1, playTimes: number=-1, layer: number=0, group: string=null, fadeOutMode: number=0): dragonBones.AnimationState {
+        return this.armature.animation.fadeIn(animationName, fadeInTime, playTimes, layer, group, fadeOutMode);
     }
     /**
-    * 播放当前动画
-    */
-    public play(): void {
-        this.armature.animation.play();
+     * - 播放指定动画。
+     * @param animationName - 动画数据名称。 （如果未设置，则播放默认动画，或将暂停状态切换为播放状态，或重新播放之前播放的动画）
+     * @param playTimes - 循环播放次数。 [-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次] （默认: -1）
+     * @returns 播放的动画状态。
+     * 
+     */
+    public play(animationName: string=null, playTimes: number=-1){
+        return this.armature.animation.play(animationName,playTimes)
     }
     /**
-    * 停止当前动画
-    */
-    public stop(): void {
-        this.armature.animation.stop();
+     * - 暂停指定动画状态的播放。
+     * @param animationName - 动画状态名称。 （如果未设置，则暂停所有动画）
+     */
+    public stop(animationName: string=null): void{
+        this.armature.animation.stop(animationName);
     }
     /**
     * 播放指定名称的动画并停止于某个时间点
     * @param animationName {string} 指定播放的动画名称.
     * @param time {number} 动画停止的绝对时间
     * @param normalizedTime {number} 动画停止的相对动画总时间的系数，这个参数和time参数是互斥的（例如 0.2：动画停止总时间的20%位置） 默认值：-1 意味着使用绝对时间。
-    * @see dragonBones.AnimationState.
     */
     public gotoAndStop(animationName: string, time: number=0, normalizedTime: number=-1):dragonBones.AnimationState{
-        this.armature.animation.gotoAndStop(animationName,time);
+        this.armature.animation.gotoAndStopByTime(animationName,time);
         return this.armature.animation.lastAnimationState;
     }
     /**
@@ -110,11 +116,11 @@ class DragonBonesAnimation extends egret.DisplayObjectContainer{
         this.armature.animation.timeScale = member;
     }
     private addArmatureToFactory(factory: dragonBones.EgretFactory,directory: string) {
-        var skeletonData = RES.getRes(directory + "_ske_json");
+        var skeletonData = RES.getRes(directory + "_ske_dbbin");
         var textureData = RES.getRes(directory+"_tex_json");
         var texture = RES.getRes(directory+"_tex_png");
-        texture.pixelHitTest=true;
-        factory.addSkeletonData(dragonBones.DataParser.parseDragonBonesData(skeletonData));
-        factory.addTextureAtlas(new dragonBones.EgretTextureAtlas(texture, textureData));
+
+        factory.parseDragonBonesData(skeletonData);  
+        factory.parseTextureAtlasData(textureData, texture);
     }
 }

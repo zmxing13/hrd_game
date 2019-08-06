@@ -2,9 +2,6 @@
 * 序列帧动画对象
 */
 class MovieClipAnimation extends egret.DisplayObjectContainer {
-    public ox:number=0;
-    public oy:number=0;
-    public id:number=0;
     public type: string = "";
     public info:any;
     private _currentFrame: number;
@@ -74,6 +71,7 @@ class MovieClipAnimation extends egret.DisplayObjectContainer {
     */
     public get totalFrames(): number {
         this._totalFrames = this.mc.totalFrames;
+        this._totalFrames = this.totalFrames;
         return this._totalFrames;
     }
     get isPlaying(): boolean {

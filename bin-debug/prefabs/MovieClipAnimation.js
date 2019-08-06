@@ -1,10 +1,12 @@
 var __reflect = (this && this.__reflect) || function (p, c, t) {
     p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
 };
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+var __extends = this && this.__extends || function __extends(t, e) { 
+ function r() { 
+ this.constructor = t;
+}
+for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
+r.prototype = e.prototype, t.prototype = new r();
 };
 /**
 * 序列帧动画对象
@@ -13,9 +15,6 @@ var MovieClipAnimation = (function (_super) {
     __extends(MovieClipAnimation, _super);
     function MovieClipAnimation(name) {
         var _this = _super.call(this) || this;
-        _this.ox = 0;
-        _this.oy = 0;
-        _this.id = 0;
         _this.type = "";
         var data = RES.getRes(name + "_json");
         var txtr = RES.getRes(name + "_png");
@@ -84,6 +83,7 @@ var MovieClipAnimation = (function (_super) {
         */
         get: function () {
             this._totalFrames = this.mc.totalFrames;
+            this._totalFrames = this.totalFrames;
             return this._totalFrames;
         },
         enumerable: true,

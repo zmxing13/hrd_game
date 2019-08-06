@@ -1,0 +1,12 @@
+{"file":"startPage.png","frames":{
+"img_start_bg":{"x":1934,"y":0,"w":50,"h":30,"offX":0,"offY":0,"sourceW":50,"sourceH":30},
+"img_start_cao":{"x":981,"y":832,"w":647,"h":556,"offX":0,"offY":2,"sourceW":653,"sourceH":563},
+"img_start_gameInstructions":{"x":981,"y":741,"w":185,"h":83,"offX":0,"offY":0,"sourceW":185,"sourceH":83},
+"img_start_ground":{"x":0,"y":1388,"w":1312,"h":245,"offX":0,"offY":0,"sourceW":1312,"sourceH":245},
+"img_start_guan":{"x":1229,"y":0,"w":518,"h":832,"offX":1,"offY":1,"sourceW":519,"sourceH":838},
+"img_start_rankBtn":{"x":1811,"y":866,"w":185,"h":83,"offX":0,"offY":0,"sourceW":185,"sourceH":83},
+"img_start_sky":{"x":0,"y":0,"w":1229,"h":741,"offX":0,"offY":0,"sourceW":1229,"sourceH":741},
+"img_start_stone":{"x":0,"y":741,"w":981,"h":397,"offX":0,"offY":0,"sourceW":986,"sourceH":402},
+"img_start_vs":{"x":1312,"y":1388,"w":445,"h":444,"offX":0,"offY":0,"sourceW":445,"sourceH":444},
+"img_start_vsBg":{"x":1747,"y":0,"w":187,"h":866,"offX":0,"offY":0,"sourceW":187,"sourceH":866},
+"img_start_startBtn":{"x":1628,"y":866,"w":183,"h":183,"offX":0,"offY":0,"sourceW":183,"sourceH":183}}}

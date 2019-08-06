@@ -1,75 +1,276 @@
 {
 	"groups": [
 		{
-			"keys": "description_json,img_btn_reset_png,img_zero_png,img_cross_png,img_vertical_png,img_bg_png,img_one_png,img_three_1_png,img_three_2_png,img_three_3_png,img_three_4_png,img_three_5_png,img_four_1_png",
+			"keys": "loadImg_json",
+			"name": "loadingAssets"
+		},
+		{
+			"keys": "img_tra_bg_png,img_tra_zero_png,img_tra_three_5_png,img_tra_three_4_png,img_tra_three_3_png,img_tra_three_2_png,img_tra_three_1_png,img_tra_one_png,img_tra_four_1_png,img_start_bg_png,img_start_vsBg_png,img_start_vs_png,img_start_cao_png,img_start_gameInstructions_png,img_start_ground_png,img_start_guan_png,img_start_rankBtn_png,img_start_sky_png,img_start_stone_png,startPage_json,img_start_startBtn_png,img_game_time_png,img_game_map_png,txt_wow_png,img_game_win_png,img_tra_two_1_png,img_tra_two_2_png,img_tra_two_3_png,img_tra_two_4_png,checkpoint_json,img_game_lost_png,doneSignBtn_png,bun_bg3_hs_png,bun_bg3_hs_cf_png,bun_bg3_ls_cf_png,button_png,curr_time_png,dui_png,dui1_png,Helot_09_png,phb1_png,phb2_png,phb3_png,qt_47_png,rankingtitle_png,shouye_3_png,tiltle_qqphb_png,tongyonk_bg_png,tongyonk_bg6_png,img_nextBtn_png,img_restBtn_png",
 			"name": "preload"
 		}
 	],
 	"resources": [
 		{
-			"name": "description_json",
+			"url": "assets/loadImg.json",
+			"type": "sheet",
+			"name": "loadImg_json",
+			"subkeys": "Img_bar,Img_bar_bg,Img_bg,bar_texture_Bmp,loadTxtImg"
+		},
+		{
+			"url": "assets/gamePage/tra/img_tra_bg.png",
+			"type": "image",
+			"name": "img_tra_bg_png"
+		},
+		{
+			"url": "assets/gamePage/tra/img_tra_zero.png",
+			"type": "image",
+			"name": "img_tra_zero_png"
+		},
+		{
+			"url": "assets/gamePage/tra/img_tra_three_5.png",
+			"type": "image",
+			"name": "img_tra_three_5_png"
+		},
+		{
+			"url": "assets/gamePage/tra/img_tra_three_4.png",
+			"type": "image",
+			"name": "img_tra_three_4_png"
+		},
+		{
+			"url": "assets/gamePage/tra/img_tra_three_3.png",
+			"type": "image",
+			"name": "img_tra_three_3_png"
+		},
+		{
+			"url": "assets/gamePage/tra/img_tra_three_2.png",
+			"type": "image",
+			"name": "img_tra_three_2_png"
+		},
+		{
+			"url": "assets/gamePage/tra/img_tra_three_1.png",
+			"type": "image",
+			"name": "img_tra_three_1_png"
+		},
+		{
+			"url": "assets/gamePage/tra/img_tra_one.png",
+			"type": "image",
+			"name": "img_tra_one_png"
+		},
+		{
+			"url": "assets/gamePage/tra/img_tra_four_1.png",
+			"type": "image",
+			"name": "img_tra_four_1_png"
+		},
+		{
+			"url": "assets/startPage/img_start_bg.png",
+			"type": "image",
+			"name": "img_start_bg_png"
+		},
+		{
+			"url": "assets/startPage/img_start_vsBg.png",
+			"type": "image",
+			"name": "img_start_vsBg_png"
+		},
+		{
+			"url": "assets/startPage/img_start_vs.png",
+			"type": "image",
+			"name": "img_start_vs_png"
+		},
+		{
+			"url": "assets/startPage/img_start_cao.png",
+			"type": "image",
+			"name": "img_start_cao_png"
+		},
+		{
+			"url": "assets/startPage/img_start_gameInstructions.png",
+			"type": "image",
+			"name": "img_start_gameInstructions_png"
+		},
+		{
+			"url": "assets/startPage/img_start_ground.png",
+			"type": "image",
+			"name": "img_start_ground_png"
+		},
+		{
+			"url": "assets/startPage/img_start_guan.png",
+			"type": "image",
+			"name": "img_start_guan_png"
+		},
+		{
+			"url": "assets/startPage/img_start_rankBtn.png",
+			"type": "image",
+			"name": "img_start_rankBtn_png"
+		},
+		{
+			"url": "assets/startPage/img_start_sky.png",
+			"type": "image",
+			"name": "img_start_sky_png"
+		},
+		{
+			"url": "assets/startPage/img_start_stone.png",
+			"type": "image",
+			"name": "img_start_stone_png"
+		},
+		{
+			"url": "assets/startPage/startPage.json",
+			"type": "sheet",
+			"name": "startPage_json",
+			"subkeys": "img_start_bg,img_start_cao,img_start_gameInstructions,img_start_ground,img_start_guan,img_start_rankBtn,img_start_sky,img_start_startBtn,img_start_stone,img_start_vs,img_start_vsBg"
+		},
+		{
+			"url": "assets/startPage/img_start_startBtn.png",
+			"type": "image",
+			"name": "img_start_startBtn_png"
+		},
+		{
+			"url": "assets/gamePage/img_game_time.png",
+			"type": "image",
+			"name": "img_game_time_png"
+		},
+		{
+			"url": "assets/gamePage/img_game_map.png",
+			"type": "image",
+			"name": "img_game_map_png"
+		},
+		{
+			"url": "assets/gamePage/deter/txt_wow.png",
+			"type": "image",
+			"name": "txt_wow_png"
+		},
+		{
+			"url": "assets/gamePage/img_game_win.png",
+			"type": "image",
+			"name": "img_game_win_png"
+		},
+		{
+			"url": "assets/gamePage/tra/img_tra_two_1.png",
+			"type": "image",
+			"name": "img_tra_two_1_png"
+		},
+		{
+			"url": "assets/gamePage/tra/img_tra_two_2.png",
+			"type": "image",
+			"name": "img_tra_two_2_png"
+		},
+		{
+			"url": "assets/gamePage/tra/img_tra_two_3.png",
+			"type": "image",
+			"name": "img_tra_two_3_png"
+		},
+		{
+			"url": "assets/gamePage/tra/img_tra_two_4.png",
+			"type": "image",
+			"name": "img_tra_two_4_png"
+		},
+		{
+			"url": "config/checkpoint.json",
 			"type": "json",
-			"url": "config/description.json"
+			"name": "checkpoint_json"
 		},
 		{
-			"name": "img_btn_reset_png",
+			"url": "assets/gamePage/deter/img_game_lost.png",
 			"type": "image",
-			"url": "assets/img_btn_reset.png"
+			"name": "img_game_lost_png"
 		},
 		{
-			"name": "img_zero_png",
+			"url": "assets/gamePage/doneSignBtn.png",
 			"type": "image",
-			"url": "assets/img_zero.png"
+			"name": "doneSignBtn_png"
 		},
 		{
-			"name": "img_cross_png",
+			"name": "bun_bg3_hs_png",
 			"type": "image",
-			"url": "assets/img_cross.png"
+			"url": "rankingList/bun_bg3_hs.png"
 		},
 		{
-			"name": "img_vertical_png",
+			"name": "bun_bg3_hs_cf_png",
 			"type": "image",
-			"url": "assets/img_vertical.png"
+			"url": "rankingList/bun_bg3_hs_cf.png"
 		},
 		{
-			"name": "img_bg_png",
+			"name": "bun_bg3_ls_cf_png",
 			"type": "image",
-			"url": "assets/img_bg.png"
+			"url": "rankingList/bun_bg3_ls_cf.png"
 		},
 		{
-			"name": "img_one_png",
+			"name": "button_png",
 			"type": "image",
-			"url": "assets/img_one.png"
+			"url": "rankingList/button.png"
 		},
 		{
-			"name": "img_three_1_png",
+			"name": "curr_time_png",
 			"type": "image",
-			"url": "assets/img_three_1.png"
+			"url": "rankingList/curr_time.png"
 		},
 		{
-			"name": "img_three_2_png",
+			"name": "dui_png",
 			"type": "image",
-			"url": "assets/img_three_2.png"
+			"url": "rankingList/dui.png"
 		},
 		{
-			"name": "img_three_3_png",
+			"name": "dui1_png",
 			"type": "image",
-			"url": "assets/img_three_3.png"
+			"url": "rankingList/dui1.png"
 		},
 		{
-			"name": "img_three_4_png",
+			"name": "Helot_09_png",
 			"type": "image",
-			"url": "assets/img_three_4.png"
+			"url": "rankingList/Helot_09.png"
 		},
 		{
-			"name": "img_three_5_png",
+			"name": "phb1_png",
 			"type": "image",
-			"url": "assets/img_three_5.png"
+			"url": "rankingList/phb1.png"
 		},
 		{
-			"name": "img_four_1_png",
+			"name": "phb2_png",
 			"type": "image",
-			"url": "assets/img_four_1.png"
+			"url": "rankingList/phb2.png"
+		},
+		{
+			"name": "phb3_png",
+			"type": "image",
+			"url": "rankingList/phb3.png"
+		},
+		{
+			"name": "qt_47_png",
+			"type": "image",
+			"url": "rankingList/qt_47.png"
+		},
+		{
+			"name": "rankingtitle_png",
+			"type": "image",
+			"url": "rankingList/rankingtitle.png"
+		},
+		{
+			"name": "shouye_3_png",
+			"type": "image",
+			"url": "rankingList/shouye_3.png"
+		},
+		{
+			"name": "tiltle_qqphb_png",
+			"type": "image",
+			"url": "rankingList/tiltle_qqphb.png"
+		},
+		{
+			"name": "tongyonk_bg_png",
+			"type": "image",
+			"url": "rankingList/tongyonk_bg.png"
+		},
+		{
+			"name": "tongyonk_bg6_png",
+			"type": "image",
+			"url": "rankingList/tongyonk_bg6.png"
+		},
+		{
+			"name": "img_nextBtn_png",
+			"type": "image",
+			"url": "assets/gamePage/img_nextBtn.png"
+		},
+		{
+			"name": "img_restBtn_png",
+			"type": "image",
+			"url": "assets/gamePage/img_restBtn.png"
 		}
 	]
 }
